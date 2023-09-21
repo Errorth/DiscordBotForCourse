@@ -108,7 +108,7 @@ class RoleButtons(disnake.ui.View):# create buttons object for autoroles-embed
         role2 = interaction.guild.get_role(1031975161227923657)
         role3 = interaction.guild.get_role(1031975041144983552)
         if role1:
-            if role1 or role2 or role3 in interaction.user.roles:
+            if role1 in interaction.user.roles or role2 in interaction.user.roles or role3 in interaction.user.roles:
                 await interaction.send(embed=disnake.Embed(description=f':x: Роли убраны.'),ephemeral=True)
                 await interaction.user.remove_roles(role1)
                 await interaction.user.remove_roles(role2)
@@ -226,7 +226,7 @@ class RoleLangButtons(disnake.ui.View):
         role5 = interaction.guild.get_role(1033416860034682960)
         role6 = interaction.guild.get_role(1033421160668479488)
         if role1:
-            if role1 or role2 or role3 or role4 or role5 or role6 in interaction.user.roles:
+            if role1 in interaction.user.roles or role2 in interaction.user.roles or role3 in interaction.user.roles or role4 in interaction.user.roles or role5 in interaction.user.roles or role6 in interaction.user.roles in interaction.user.roles:
                 await interaction.send(embed=disnake.Embed(description=f':x: Роли убраны.'),ephemeral=True)
                 await interaction.user.remove_roles(role1)
                 await interaction.user.remove_roles(role2)
